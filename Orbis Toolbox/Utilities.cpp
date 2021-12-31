@@ -1,5 +1,5 @@
 #include "Common.h"
-#include "Utilities.h"
+#include <orbis/_types/kernel.h>
 
 void klog(const char* fmt, ...)
 {

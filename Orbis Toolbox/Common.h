@@ -15,7 +15,7 @@
 #include <orbis/libmonovm.h>
 
 #include "Version.h"
-#include "Utilities.h"
+#include <orbis/_types/kernel.h>
 #include "Mono.h"
 #include "Detour.h"
 #include "Patcher.h"

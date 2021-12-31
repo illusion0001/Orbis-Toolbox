@@ -1,0 +1,29 @@
+name: CI
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Double extraction because tar is borked
+      - name: Download Toolchain
+        run: |
+          $OO_TOOLCHAIN_VER="v0.5.2"
+          mkdir C:\downloads
+          curl -fL https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain/releases/download/${OO_TOOLCHAIN_VER}/${OO_TOOLCHAIN_VER}.tar.gz -o C:\downloads\${OO_TOOLCHAIN_VER}.tar.gz
+          cd C:\
+          7z -r x C:\downloads\${OO_TOOLCHAIN_VER}.tar.gz -oc:\
+          #7z -r x C:\${OO_TOOLCHAIN_VER}.tar -oC:\OpenOrbis\PS4Toolchain
+          7z -r x C:\${OO_TOOLCHAIN_VER}.tar -oc:\
+          ls C:\OpenOrbis\PS4Toolchain
+          echo OO_PS4_TOOLCHAIN=C:\OpenOrbis\PS4Toolchain >> $env:GITHUB_ENV
+
+      - name: Build Orbis Toolbox
+        run: |
+          cd "Orbis Toolbox"
+          mkdir test
+          ./build-ci.bat "${env:GITHUB_WORKSPACE}\Orbis Toolbox" test12345 test
