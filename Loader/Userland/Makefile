@@ -36,7 +36,7 @@ $(ODIR):
 .PHONY: clean
 
 pack_resources:
-	cp '../../Orbis Toolbox.sprx' '$(RDIR)/Orbis_Toolbox.bin'
+	cp '../../Orbis-Toolbox.sprx' '$(RDIR)/Orbis_Toolbox.bin'
 	cp '../Kernel/Kernel.ELF' '$(RDIR)/Kernel.bin'
 
 clean:

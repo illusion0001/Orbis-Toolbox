@@ -22,8 +22,8 @@ jobs:
           ls C:\OpenOrbis\PS4Toolchain
           echo OO_PS4_TOOLCHAIN=C:\OpenOrbis\PS4Toolchain >> $env:GITHUB_ENV
 
-      - name: Build Orbis Toolbox
+      - name: Build Orbis-Toolbox
         run: |
-          cd "Orbis Toolbox"
+          cd "Orbis-Toolbox"
           mkdir test
-          ./build-ci.bat "${env:GITHUB_WORKSPACE}\Orbis Toolbox" test12345 test
+          ./build-ci.bat "${env:GITHUB_WORKSPACE}\Orbis-Toolbox" test12345 test

@@ -3,7 +3,7 @@
     .align  4
 
 LibraryFile:
-    .incbin "../../Orbis Toolbox.sprx"
+    .incbin "../../Orbis-Toolbox.sprx"
 LibraryFileEnd:
 
     .global LibraryFileSize

@@ -66,7 +66,7 @@ int klog(char* fmt, ...)
     va_end(args);
 
     char buffer2[0x400] = { 0 };
-    ksprintf(buffer2, "[Orbis Toolbox] %s\n", buffer);
+    ksprintf(buffer2, "[Orbis-Toolbox] %s\n", buffer);
 
     #if defined(SOFTWARE_VERSION_505) || defined(SOFTWARE_VERSION_NA)
     
@@ -118,7 +118,7 @@ void Log(char* fmt, ...)
         va_end(args);
 
         char buffer2[0x400] = { 0 };
-        sprintf(buffer2, "[Orbis Toolbox] %s\n", buffer);
+        sprintf(buffer2, "[Orbis-Toolbox] %s\n", buffer);
 
         sceKernelDebugOutText(0, buffer2);
     }

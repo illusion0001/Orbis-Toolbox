@@ -51,4 +51,4 @@ extern "C"
 #include "Util/Util.hpp"
 #include "Resolver/Resolver.hpp"
 
-#define SPRX_PATH "/data/Orbis Toolbox/Orbis Toolbox.sprx"
+#define SPRX_PATH "/data/Orbis-Toolbox/Orbis-Toolbox.sprx"
