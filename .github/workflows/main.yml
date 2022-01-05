@@ -26,4 +26,4 @@ jobs:
         run: |
           cd "Orbis-Toolbox"
           mkdir test
-          ./build-ci.bat "${env:GITHUB_WORKSPACE}\Orbis-Toolbox" test12345 test
+          ./build-ci.bat "${env:GITHUB_WORKSPACE}" " " test
