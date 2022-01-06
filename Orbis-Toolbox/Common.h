@@ -13,15 +13,13 @@
 #include <stdint.h>
 #include <orbis/libkernel.h>
 #include <orbis/libmonovm.h>
-
-#include "Version.h"
 #include <orbis/_types/kernel.h>
+#include "Version.h"
 #include "Mono.h"
 #include "Detour.h"
 #include "Patcher.h"
 #include "UI.h"
 #include "Menu.h"
-
 #include "Widget.h"
 #include "Label.h"
 #include "Panel.h"
